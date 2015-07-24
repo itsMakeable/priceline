@@ -1,0 +1,39 @@
+a
+	reset-link()
+	cursor pointer
+	text-decoration none
+	transition all 0.2s ease
+	&:focus
+		outline: 0
+	&:link
+		color blue
+	&:hover
+		color darkblue
+	&:active
+		color darkblue
+		transform scale(0.99)
+		transform-origin 50% 50%
+	&[disabled]
+		color gray !important
+		transform scale(1) !important
+	&:visited
+		color blue
+
+.button,
+a.button
+	background-color blue
+	color white
+	padding 20px
+	border-radius 4px
+	fs(21px)
+	margin-top 10px
+	upcase()
+	display inline-block
+	font-family regular
+	white-space nowrap
+	&.instabutton
+		background-color #507da1
+		background linear-gradient(to top, #325887 0%,#507da1 100%)
+		padding 10px 10px 10px 40px
+		fs(10px)
+		text-transform capitalize

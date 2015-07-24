@@ -1,0 +1,47 @@
+/*!**
+  title: Footer
+  section: Main Footer
+  description: This is the main footer.
+  example: |
+    footer.footer.footer--main(style='position:static;')
+        .container
+            .row
+                .footer__social-list
+                    .container
+                        .row
+                            each val, index in [{name: 'linkedin'},{name: 'twitter'},{name: 'facebook'}]
+                                a(href="")
+                                    svg(viewbox='0 0 100 100')
+                                        use(xlink:href='includes/symbols.svg#icon_#{val.name}')
+                .footer__subnav
+                    .container
+                        .row
+                            a(href="#", target="_blank") Legal
+                            a(href="#", target="_blank") Privacy Policy
+                            a(href="#", target="_blank") Cookie Policy
+                            span &copy;2015 all rights reserved
+***/
+.number-block
+    display block
+    height 499px
+    text-align center
+    position relative
+
+.number-block__img
+    height inherit
+    cf()
+.number-block__col
+    float left
+    
+.number-block__text
+    background-color white
+    width 33%
+    height:inherit
+    position relative
+
+.number-block.is-right
+    .number-block__text
+        float right
+        width 45%
+        // .center
+        //     width 214px

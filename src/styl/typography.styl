@@ -1,0 +1,72 @@
+/*!**
+  title: Headers
+  section: Typography
+  example: |
+    <h1>H1 Header</h1>
+    <h2>H2 Header</h2>
+    <h3>H3 Header</h3>
+    <h4>H4 Header</h4>
+    <h5>H5 Header</h5>
+    <h6>H6 Header</h6>
+***/
+
+h1, h2, h3, h4, h5, h6
+  // text-rendering optimizeLegibility
+  font-smooth always
+  -moz-osx-font-smoothing: grayscale
+  color deepblack
+  font-family lightcond
+  strong
+    font-family boldcond
+    
+h2, h1
+  strong
+    font-family medcond
+    
+h1, h2, h3, h4, h5, h6, p, li
+  font-weight: normal
+  color inherit
+
+// h1
+//   fs(4rem) 
+//   padding-bottom px(24)
+.h3
+  fs(52px)
+  
+.h4
+  upcase()
+  fs(26px)
+  .underline
+    padding-bottom 20px
+  
+.h5
+  upcase()
+  fs(72px)
+  padding-bottom 12px
+  
+.underline
+  border-bottom 8px solid deepblack
+  padding 0 10px
+  display inline-block
+  margin-bottom 30px
+  &.is-small
+    margin-bottom 20px
+  &.no-padding
+    padding 0
+    .h3
+      padding-bottom 20px
+    .h4
+      padding-bottom 15px
+
+p
+  fs(21px) 
+  line-height 1.238095238
+  padding-bottom px(16)
+  font-family lightcond
+
+.text--light
+  h1, h2, h3, h4, h5, h6, p, li
+    color: white
+  .underline
+    border-bottom-color white
+  
