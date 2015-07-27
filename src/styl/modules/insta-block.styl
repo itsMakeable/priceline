@@ -1,15 +1,17 @@
 .number-block__instas
-	max-width 66.666%
-	overflow-x scroll
-	overflow-y hidden
+	max-width 640px
+	// overflow-x scroll
+	overflow hidden
 	height inherit
 	position relative
-	.number-block__instas-container
-		width 130%
-		overflow hidden
+	+below(960px)
+		max-width 100%
+	// .number-block__instas-container
+	// 	width 130%
+	// 	overflow hidden
 
 .insta-block
-	size 166.666666667px
+	size 128px
 	background-color white
 	position relative
 	float left
@@ -19,22 +21,27 @@
 		position absolute
 		width 100%
 		bottom 0
-	
+		
+.insta-block__img-border
+	width 72px
+	height 72px
+	border-radius 50%
+	border 2px solid blue
+	position relative
+	margin auto
 .insta-block__img
 	margin auto
 	border-radius 50%
-	padding 10px
-	border 2px solid blue
+	@extend $absolute-cover
 	width 62px
 	height 62px
 	overflow hidden
-	margin-bottom 6px
 	&.is-small
 		border none
 		padding 0
 		size 32px
-		position relative
-		bottom -23px
+		position absolute
+		top -90px
 
 .insta-block__name
 	color blue
@@ -93,3 +100,47 @@
 	fs(44px)
 	font-family boldcond
 	padding 5px 0 10px 0
+	
+.insta-slider
+	align()
+
+.insta-user
+	fs(16px)
+	
+.insta-name
+	font-family boldcond
+	fs(40px)
+	
+.insta-user-pic
+	align()
+	size 70px
+	top 46%
+	z-index 10
+	border-radius 50%
+	border 8px solid white
+	
+.insta-slide
+	width 290px
+	height 542px
+	padding 30px 18px 40px 18px
+	position relative
+	background-color white
+	p
+		fs(17px)
+		padding-top 10px
+		padding-bottom 2px
+	a.button.instabutton
+		border 1px solid black
+		color black
+		fs(12px)
+		padding 10px 10px 10px 10px
+		img
+			width 12px !important
+			height 12px !important
+			top -1px !important
+
+.insta-gram
+	position absolute
+	bottom 0
+	left 0
+	right 0

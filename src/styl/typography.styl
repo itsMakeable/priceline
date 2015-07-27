@@ -27,9 +27,12 @@ h1, h2, h3, h4, h5, h6, p, li
   font-weight: normal
   color inherit
 
-// h1
-//   fs(4rem) 
-//   padding-bottom px(24)
+h1
+  +below(960px)
+    font-size 100px !important
+  +below(540px)
+    font-size 60px !important
+    
 .h3
   fs(52px)
   
@@ -45,7 +48,7 @@ h1, h2, h3, h4, h5, h6, p, li
   padding-bottom 12px
   
 .underline
-  border-bottom 8px solid deepblack
+  border-bottom 8px solid currentColor
   padding 0 10px
   display inline-block
   margin-bottom 30px

@@ -26,22 +26,88 @@
     height 499px
     text-align center
     position relative
-
+    +below(960px)
+        height auto !important
 .number-block__img
     height inherit
+    width 640px
+    float right
     cf()
+    +below(960px)
+        width 100%
+        float none
+        min-height 499px
+        height auto
+    
+.number-block.is-right
+    .number-block__img
+        width (960px - 432px)
+        float left
+        +below(960px)
+            width 100%
+            float none
+    
 .number-block__col
     float left
+    +below(960px)
+        float none
     
 .number-block__text
     background-color white
-    width 33%
+    width 319px
     height:inherit
     position relative
+    .center
+        width 70%
+    +below(960px)
+        width 100% !important
+        background-color blue
+        color white
+        min-height 350px
+        height auto
+        .center
+            width 250px
+            left auto
+            right 30px
+            transform translate(0, -50%)
+    
 
 .number-block.is-right
     .number-block__text
         float right
-        width 45%
-        // .center
-        //     width 214px
+        width 432px
+        .center
+            width 60%
+            
+        +below(960px)
+            width 100%
+            float none
+            .center
+                right auto
+                left 30px
+                transform translate(0, -50%)
+
+.big-number
+    color blue
+    position absolute
+    fs(790px)
+    top 40px
+    font-family boldcond
+    line-height 0.5
+    left px(-55)
+    z-index 1
+    &.is-1
+        fs(620px)
+    +below(960px)
+        color white
+        fs(550px)
+        top 20px
+        &.is-2
+            fs(600px)
+        &.is-1
+            fs(570px)
+            top 20px
+.number-block.is-right
+    .big-number
+        right px(-55)
+        left auto

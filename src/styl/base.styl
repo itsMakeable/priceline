@@ -20,6 +20,7 @@ html
 	min-height 100%
 	overflow-x hidden
 	
+	
 body
 	-webkit-touch-callout none
 	-webkit-text-size-adjust none
@@ -27,12 +28,16 @@ body
 	color black
 	height 100%
 	transition opacity 0.1s ease
+	background-color #f0f0f0
 	&.is-active
 		opacity: 1 !important
 i
 	display inline-block
 	vertical-align middle
 	font inherit
+
+img
+	width 100%
 	
 .hidden
 	position: absolute
@@ -54,4 +59,12 @@ i
 .overlay
 	background-color rgba(deepblack,0.5)
 	@extend $absolute-cover
-	z-index 999
+	z-index 0
+	
+
+.hide-large
+	+above(960px)
+		display:none !important
+.hide-small
+	+below(960px)
+		display:none !important

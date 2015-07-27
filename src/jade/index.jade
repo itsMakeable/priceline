@@ -1,101 +1,146 @@
 extends layouts/layout-primary
 
 block content
-	header.header-main(style='background:url("http://placehold.it/350x150") no-repeat; background-size: cover; background-position:50% 50%; height:100vh;min-height:640px')
-		.container(style='height:inherit; position:relative')
-			.header-main__content(style='position:absolute; bottom:7%;width: 100%;')
-				//- img(src="logo.png", alt="")
-				h1(style='font-size: 148px; color: white; opacity:0.89;  text-align:center;'): strong #roomwithaview
-				h2(style='font-size: 22px; color: white; text-align:center;')
-					strong 15 INSTAGRAMERS, 15 GREAT PRICELINE VIEWS, 15 CHANCES TO WIN
-				img(src="img/arrow-06.png", alt="" width='38' height='auto' style='display:block;margin:20px auto 0')
-	section.number-block
-		.number-block__img(style='background:url("http://placehold.it/350x150") no-repeat; background-size: cover; background-position:50% 50%')
+	.container
+		header.header-main(style='background:url("img/header_image.png") no-repeat; background-size: cover; background-position:50% 50%;height:540px;position: relative; z-index:9')
+			.container(style='height:inherit; position:relative')
+				.header-main__content(style='position:absolute; bottom:7%;width: 100%;')
+					//- img(src="logo.png", alt="")
+					h1(style='font-size: 148px; color: white; opacity:0.89;  text-align:center;'): strong #roomwithaview
+					h2(style='font-size: 22px; color: white; text-align:center;')
+						strong 
+							| 15 INSTAGRAMERS, 
+							br.hide-large
+							| 15 GREAT PRICELINE VIEWS, 
+							br.hide-large
+							| 15 CHANCES TO WIN
+							
+					img(src="img/arrow-06.png", alt="" width='38' height='auto' style='display:block;margin:20px auto 0;width:36px; height: auto;')
+		section.number-block(style='height:384px;')
 			.number-block__col.number-block__text.is-right
-				.center
+				.big-number.is-1 1
+				.center(style='z-index:600')
 					span.underline
 						h5.h5
 							strong View
 					p Enjoy the views on Instagram and live vicariously through our 15 intrepid travelers as they each post the killer view from their hotel rooms across the country. Guess their location and you could win your own #roomwithaview.
-			.number-block__col.number-block__instas
-				.overlay
-					.insta-overlay
-						img.close-button(src="img/x-03.png", alt="")
-						.insta-overlay__col.insta-overlay__col--left(style='background:url("http://placehold.it/350x150") no-repeat; background-size:cover;background-position:50% 50%')
+			.number-block__img
+				.hide-large(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;height: 620px;position:relative')
+					.overlay
+						.insta-slider
+							.insta-slide
+								.insta-user normancook
+								.insta-name Kaley Cuoco
+								.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
 
-						.insta-overlay__col.insta-overlay__col--right
-							.center
-
-								.insta-overlay__user normancook
-								.insta-overlay__name Kaley Cuoco
 								p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
-								a.button.instabutton(href='') Follow @normancook
+								a.button.instabutton(href='') 
+									img(src="img/instagram-black.png", alt="" style='height:20px;width:20px;display:inline-block;vertical-align:middle;margin-right:10px;position:relative;top:-2px;')
+									| Follow @normancook
+								img.insta-gram(src='http://lorempixel.com/290/290/' style='width:290px;height:290px;')
 
-				.number-block__instas-container
-					each val, index in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-						.insta-block
-							.center
-								.insta-block__img(style='background:url("http://placehold.it/350x150") no-repeat; background-size:cover;background-position:50% 50%')
-								.insta-block__name Kaley Cuoco
-								.insta-block__info 
-									span
-									| @NormanCook
-						.insta-block(style='background:url("http://placehold.it/350x150") no-repeat; background-size:cover;background-position:50% 50%')
-							.bottom
-								.insta-block__img.is-small(style='background:url("http://placehold.it/350x150") no-repeat; background-size:cover;background-position:50% 50%')
-								.insta-block__info-bg
+
+				.number-block__col.number-block__instas.hide-small
+					//- .overlay
+					//- 	.insta-overlay
+					//- 		img.close-button(src="img/x-03.png", alt="")
+					//- 		.insta-overlay__col.insta-overlay__col--left(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
+
+					//- 		.insta-overlay__col.insta-overlay__col--right
+					//- 			.center
+
+					//- 				.insta-overlay__user normancook
+					//- 				.insta-overlay__name Kaley Cuoco
+					//- 				p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
+					//- 				a.button.instabutton(href='') Follow @normancook
+
+					.number-block__instas-container
+						each val, index in [1,2,3,4,5,6,7,8]
+							.insta-block(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%')
+								.bottom
+									.insta-block__img.is-small(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
+									.insta-block__info-bg
+										.insta-block__info 
+											span
+											| @NormanCook
+										.insta-block__name Kaley Cuoco
+										.insta-block__info Chicago, IL
+							.insta-block
+								.center
+									.insta-block__img-border
+										.insta-block__img(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
+									.insta-block__name Kaley Cuoco
 									.insta-block__info 
 										span
 										| @NormanCook
-									.insta-block__name Kaley Cuoco
-									.insta-block__info Chicago, IL
 
-	section.number-block.is-right
-		.number-block__img(style='background:url("http://placehold.it/350x150") no-repeat; background-size: cover; background-position:50% 50%')
+		section.number-block.is-right
+			
 			.number-block__col.number-block__text.is-right
-				.center
+				.big-number.is-2 2
+				.center(style='z-index:600')
 					span.underline
 						h5.h5
 							strong Clue
-					p Get a clue (or a few) and follow @priceline for hints and tips to open your eyes to the #roomwithaview in the posts.
-					a(href='')
-						img(src="img/instagram-button.png", alt="" width='206' height='auto')
-	section.number-block
-		.number-block__img(style='background:url("http://placehold.it/350x150") no-repeat; background-size: cover; background-position:50% 50%')
+					p Get a clue (or a few) and follow @priceline for hints and tips to open your eyes to the #roomwithaview in th&nbsp;posts.
+					a.button.instabutton(href='') 
+						img.hide-small(src="img/instagram-black.png", alt="" style='height:20px;width:20px;display:inline-block;vertical-align:middle;margin-right:10px;position:relative;top:-2px;')
+						img.hide-large(src="img/instagram-blue.png", alt="" style='height:20px;width:20px;display:inline-block;vertical-align:middle;margin-right:10px;position:relative;top:-2px;')
+						| Follow Us on Instagram
+			.number-block__img(style='background:url("img/Section2_IMG.png") no-repeat; background-size: cover; background-position:50% 50%')
+		section.number-block
+			
 			.number-block__col.number-block__text.is-right
-				.center
+				.big-number.is-3 3
+				.center(style='z-index:600')
 					span.underline
 						h5.h5
 							strong Play
-					p Play smart. Play often. Post the hotel name and location in the comments of each #roomwithaview. For every room you guess correctly you’re entered into a drawing to win. The more rooms you guess correctly, the more chances you have to win.
+					p Play smart. Play often. Post the hotel name and location in the comments of each #roomwithaview. For every room you guess correctly you’re entered into a drawing to win. The more rooms you guess correctly, the more chances you have to&nbsp;win.\
+			.number-block__img(style='background:url("img/keyboard.jpg") no-repeat; background-size: cover; background-position:50% 50%')
 
-	section.number-block.is-right
-		.number-block__img(style='background:url("http://placehold.it/350x150") no-repeat; background-size: cover; background-position:50% 50%')
-			.number-block__col.number-block__text.is-right
-				.center
+		section.number-block.is-right
+			
+			.number-block__col.number-block__text.is-right(style='position:relative;z-index:8')
+				.big-number.is-4 4
+				.center(style='z-index:600')
 					span.underline
 						h5.h5
 							strong Stay
-					p Every other day, a winner drawn at random will receive a $300 Express Deals gift certificate they can use towards staying in their own #roomwithaview
+					p Every other day, a winner drawn at random will receive a $300 Express Deals gift certificate they can use towards staying in their own&nbsp;#roomwithaview
+			.number-block__img(style='background:url("img/Section4_IMG.png") no-repeat; background-size: cover; background-position:50% 50%;')
 
-	section.text--light.bg--black(style='padding:30px 0;text-align:center')
-		.container
-			span.underline.no-padding.is-small
-				h4.h4
-					strong The Details
-					
-			p Valid dates 8/1/15 - 9/1/15. Must be 21 years or older at time of entry to qualify. See Official Rules and Privacy Policy. More about the Room you could Win. 
+		section.text--light.bg--black(style='padding:30px 0;text-align:center;z-index:9;position:relative')
+			.container
+				span.underline.no-padding.is-small
+					h4.h4
+						strong The Details
+						
+				p 
+					| Valid dates 8/1/15 - 9/1/15. Must be 21 years or older at time of entry to&nbsp;qualify. 
+					br
+					| See Official Rules and Privacy Policy. More about the Room you could&nbsp;Win. 
 
-	section.number-block
-		.number-block__img(style='background:url("http://placehold.it/350x150") no-repeat; background-size: cover; background-position:50% 50%')
-			.number-block__col.number-block__text
-				.center
+		section.number-block
+			.number-block__img.hide-small(style='background:url("img/Express_deals.png") no-repeat; background-size: cover; background-position:50% 50%;width:50%;')
+			.number-block__col.number-block__text(style='width:50%;background-color: white;color: black;')
+				.hide-large
+					div(style='padding: 30px 0 20px 0;')
+						span.underline.no-padding
+							h3.h3
+								| Express&nbsp;
+								strong Deals
+					img(src="img/Express_deals.png", alt="" )
+					div(style='padding: 5%;text-align:center')
+						p(style='max-width: 540px; display:block;margin: auto;') Choose from a huge collection of top hotels at incredible prices with no bidding required. See the neighborhood, amenities and price of each hotel before you book. You’ll find out the exact name of the hotel immediately after&nbsp;purchase.
+						a.button(href='') Search Express Deals
+				.center.hide-small
 					span.underline.no-padding
-						h3.h3
-							| Express&nbsp;
-							strong Deals
-					p Choose from a huge collection of top hotels at incredible prices with no bidding required. See the neighborhood, amenities and price of each hotel before you book. You’ll find out the exact name of the hotel immediately after purchase.
+							h3.h3
+								| Express&nbsp;
+								strong Deals
+					p Choose from a huge collection of top hotels at incredible prices with no bidding required. See the neighborhood, amenities and price of each hotel before you book. You’ll find out the exact name of the hotel immediately after&nbsp;purchase.
 					a.button(href='') Search Express Deals
 
-		
-block footer
+			
+	block footer
