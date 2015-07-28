@@ -52,13 +52,13 @@
 	font-family boldcond
 
 .insta-block__info
-	fs(12px)
-	font-family lightcond
+	fs(7px)
+	font-family regular
 	color gray
 	letter-spacing 2px
 	upcase()
 	span
-		size 14px
+		size 9px
 		display inline-block
 		vertical-align middle
 		margin-right 5px
@@ -78,16 +78,31 @@
 	width 588px
 	height 326px
 	text-align left
+	z-index 0
+	opacity 0
+	transition 0.30s ease-in
+	a.button.instabutton
+		padding 10px 10px 10px 10px
+		fs(12px)
+		img
+			width 12px !important
+			height 12px !important
+			top -1px !important
+	&.is-active
+		z-index 1
+		opacity 1
 	.close-button
 		size 20px
 		position absolute
 		top 18px
 		right 18px
 	.center
-		width 80%
-		
+		width 75%
+		margin-left 20px
 	p
-		fs(12px)
+		fs(18px)
+		em
+			font-family boldcondit
 	
 .insta-overlay__col
 	position: relative
@@ -101,33 +116,82 @@
 	font-family boldcond
 	padding 5px 0 10px 0
 	
+.has-happened .insta-overlay__name
+	padding-bottom 5px
+	
 .insta-slider
-	align()
+	// align()
+	// width 100%
+	cf()
+	// overflow hidden
+	// position absolute
+	// width 100%
+	// margin: 0
+	// padding: 0
+	// list-style-type: none
+	// -webkit-transform-style: preserve-3d
+	// -ms-transform-style: preserve-3d
+	// transform-style: preserve-3d
 
 .insta-user
 	fs(16px)
+	font-family regular
 	
 .insta-name
 	font-family boldcond
 	fs(40px)
 	
+.insta-overlay__user
+	fs(14px)
+	font-family regular
+
+.has-happened .insta-overlay__name
+	fs(32px)
+	font-family medcond
+	
+	
+.insta-overlay__large-text 
+	fs(48px)
+	font-family medcond
+	padding-top 6px
+	
+.insta-overlay__small-text
+	fs(16px)
+	font-family lightcond
+
+.insta-overlay__location
+	font-family lightcond
+	fs(20px)
+	padding-bottom 10px
+
+	
 .insta-user-pic
 	align()
-	size 70px
-	top 46%
+	size 90px
 	z-index 10
 	border-radius 50%
 	border 8px solid white
+.swiper-container
+	width 100%
+	height 560px
+	align()
+
+.insta-info
+	padding 25px 20px 40px 20px
 	
 .insta-slide
 	width 290px
-	height 542px
-	padding 30px 18px 40px 18px
+	height 560px
+	
 	position relative
 	background-color white
+	margin auto
+	.insta-user-pic
+		top 270px
+		size 70px
 	p
 		fs(17px)
-		padding-top 10px
+		padding-top 8px
 		padding-bottom 2px
 	a.button.instabutton
 		border 1px solid black
@@ -144,3 +208,4 @@
 	bottom 0
 	left 0
 	right 0
+	margin auto

@@ -26,37 +26,62 @@ block content
 					p Enjoy the views on Instagram and live vicariously through our 15 intrepid travelers as they each post the killer view from their hotel rooms across the country. Guess their location and you could win your own #roomwithaview.
 			.number-block__img
 				.hide-large(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;height: 620px;position:relative')
+					.swiper-container
+						.insta-slider.swiper-wrapper
+							each val, index in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+								.insta-slide.swiper-slide
+									.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
+									.insta-info
+										.insta-user normancook
+										.insta-name Kaley Cuoco
+										
+										p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
+										a.button.instabutton(href='') 
+											img(src="img/instagram-black.png", alt="" style='height:20px;width:20px;display:inline-block;vertical-align:middle;margin-right:10px;position:relative;top:-2px;')
+											| Follow @normancook
+									img.insta-gram(src='http://lorempixel.com/290/290/' style='width:290px;height:290px;')
+						.swiper-pagination
 					.overlay
-						.insta-slider
-							.insta-slide
-								.insta-user normancook
-								.insta-name Kaley Cuoco
-								.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
 
-								p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
-								a.button.instabutton(href='') 
-									img(src="img/instagram-black.png", alt="" style='height:20px;width:20px;display:inline-block;vertical-align:middle;margin-right:10px;position:relative;top:-2px;')
-									| Follow @normancook
-								img.insta-gram(src='http://lorempixel.com/290/290/' style='width:290px;height:290px;')
 
 
 				.number-block__col.number-block__instas.hide-small
-					//- .overlay
-					//- 	.insta-overlay
-					//- 		img.close-button(src="img/x-03.png", alt="")
-					//- 		.insta-overlay__col.insta-overlay__col--left(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
+					.overlay
+						.insta-overlay.has-happened
+							.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
+							img.close-button(src="img/x-03.png", alt="")
+							.insta-overlay__col.insta-overlay__col--left(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
 
-					//- 		.insta-overlay__col.insta-overlay__col--right
-					//- 			.center
+							.insta-overlay__col.insta-overlay__col--right
+								.center
 
-					//- 				.insta-overlay__user normancook
-					//- 				.insta-overlay__name Kaley Cuoco
-					//- 				p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
-					//- 				a.button.instabutton(href='') Follow @normancook
+									.insta-overlay__user normancook
+									.insta-overlay__name Kaley Cuoco
+									.insta-overlay__small-text posted a view from 
+									.insta-overlay__large-text HOTEL FELIX
+									.insta-overlay__location CHICAGO, IL
+									p 
+										| congrats to 
+										em @jayms 
+										br
+										| for guessing correctly!
+									a.button.instabutton(href='') Follow @normancook
+						.insta-overlay.will-happen
+							.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
+							img.close-button(src="img/x-03.png", alt="")
+							.insta-overlay__col.insta-overlay__col--left(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
+
+							.insta-overlay__col.insta-overlay__col--right
+								.center
+
+									.insta-overlay__user normancook
+									.insta-overlay__name Kaley Cuoco
+									p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
+									a.button.instabutton(href='') Follow @normancook
 
 					.number-block__instas-container
 						each val, index in [1,2,3,4,5,6,7,8]
-							.insta-block(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%')
+							.insta-block.has-happened(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%')
 								.bottom
 									.insta-block__img.is-small(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
 									.insta-block__info-bg
@@ -65,7 +90,7 @@ block content
 											| @NormanCook
 										.insta-block__name Kaley Cuoco
 										.insta-block__info Chicago, IL
-							.insta-block
+							.insta-block.will-happen
 								.center
 									.insta-block__img-border
 										.insta-block__img(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
@@ -86,8 +111,10 @@ block content
 					a.button.instabutton(href='') 
 						img.hide-small(src="img/instagram-black.png", alt="" style='height:20px;width:20px;display:inline-block;vertical-align:middle;margin-right:10px;position:relative;top:-2px;')
 						img.hide-large(src="img/instagram-blue.png", alt="" style='height:20px;width:20px;display:inline-block;vertical-align:middle;margin-right:10px;position:relative;top:-2px;')
-						| Follow Us on Instagram
-			.number-block__img(style='background:url("img/Section2_IMG.png") no-repeat; background-size: cover; background-position:50% 50%')
+						| Follow Us 
+						span.hide-small on Instagram
+			.number-block__img(style='background:url("img/Section2_IMG.png") no-repeat; background-size: cover; background-position:50% 0%')
+				img.hide-large(src="img/Section2_IMG.png", alt="")
 		section.number-block
 			
 			.number-block__col.number-block__text.is-right
@@ -96,8 +123,9 @@ block content
 					span.underline
 						h5.h5
 							strong Play
-					p Play smart. Play often. Post the hotel name and location in the comments of each #roomwithaview. For every room you guess correctly you’re entered into a drawing to win. The more rooms you guess correctly, the more chances you have to&nbsp;win.\
+					p Play smart. Play often. Post the hotel name and location in the comments of each #roomwithaview. For every room you guess correctly you’re entered into a drawing to win. The more rooms you guess correctly, the more chances you have to&nbsp;win.
 			.number-block__img(style='background:url("img/keyboard.jpg") no-repeat; background-size: cover; background-position:50% 50%')
+				img.hide-large(src="img/keyboard.jpg", alt="")
 
 		section.number-block.is-right
 			
@@ -109,6 +137,7 @@ block content
 							strong Stay
 					p Every other day, a winner drawn at random will receive a $300 Express Deals gift certificate they can use towards staying in their own&nbsp;#roomwithaview
 			.number-block__img(style='background:url("img/Section4_IMG.png") no-repeat; background-size: cover; background-position:50% 50%;')
+				img.hide-large(src="img/Section4_IMG.png", alt="")
 
 		section.text--light.bg--black(style='padding:30px 0;text-align:center;z-index:9;position:relative')
 			.container
@@ -116,13 +145,15 @@ block content
 					h4.h4
 						strong The Details
 						
-				p 
+				p.details-copy
 					| Valid dates 8/1/15 - 9/1/15. Must be 21 years or older at time of entry to&nbsp;qualify. 
 					br
 					| See Official Rules and Privacy Policy. More about the Room you could&nbsp;Win. 
 
 		section.number-block
 			.number-block__img.hide-small(style='background:url("img/Express_deals.png") no-repeat; background-size: cover; background-position:50% 50%;width:50%;')
+				img.hide-large(src="img/Express_deals.png", alt="")
+
 			.number-block__col.number-block__text(style='width:50%;background-color: white;color: black;')
 				.hide-large
 					div(style='padding: 30px 0 20px 0;')

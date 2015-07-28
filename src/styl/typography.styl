@@ -42,10 +42,14 @@ h1
   .underline
     padding-bottom 20px
   
+    
+  
 .h5
   upcase()
   fs(72px)
   padding-bottom 12px
+  +below(540px)
+    fs(54px)
   
 .underline
   border-bottom 8px solid currentColor
@@ -66,6 +70,8 @@ p
   line-height 1.238095238
   padding-bottom px(16)
   font-family lightcond
+  +below(540px)
+    fs(18px)
 
 .text--light
   h1, h2, h3, h4, h5, h6, p, li
@@ -73,3 +79,7 @@ p
   .underline
     border-bottom-color white
   
+.details-copy
+  +below(540px)
+    fs(15px)
+    line-height 1.7

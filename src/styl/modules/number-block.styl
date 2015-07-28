@@ -28,6 +28,10 @@
     position relative
     +below(960px)
         height auto !important
+        
+.lt-ie11 .number-block
+    overflow hidden
+    
 .number-block__img
     height inherit
     width 640px
@@ -36,7 +40,7 @@
     +below(960px)
         width 100%
         float none
-        min-height 499px
+        min-height auto
         height auto
     
 .number-block.is-right
@@ -66,12 +70,19 @@
         min-height 350px
         height auto
         .center
-            width 250px
+            width 300px
+            
+    +below(640px)
+        .center
+            width 60%
             left auto
-            right 30px
+            right 5%
             transform translate(0, -50%)
+    +below(440px)
+        .center
+            right 10%
+            width 45%
     
-
 .number-block.is-right
     .number-block__text
         float right
@@ -83,30 +94,45 @@
             width 100%
             float none
             .center
+                width 300px
+        +below(640px)
+            .center
                 right auto
                 left 30px
+                width 50%
                 transform translate(0, -50%)
+        +below(440px)
+            .center
+                width 45%
 
 .big-number
     color blue
     position absolute
-    fs(790px)
-    top 40px
+    fs(770px)
+    top 240px
     font-family boldcond
-    line-height 0.5
+    line-height 0
     left px(-55)
     z-index 1
+    pointer-events: none
     &.is-1
-        fs(620px)
+        fs(630px)
+        top 190px
+    &.is-4
+        fs(800px)
+        top 230px
     +below(960px)
         color white
         fs(550px)
-        top 20px
-        &.is-2
+        top 170px
+        &.is-4
+            top 172px
             fs(600px)
+        &.is-2
+            fs(580px)
         &.is-1
-            fs(570px)
-            top 20px
+            fs(560px)
+            top 160px
 .number-block.is-right
     .big-number
         right px(-55)

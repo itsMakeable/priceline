@@ -60,6 +60,12 @@ img
 	background-color rgba(deepblack,0.5)
 	@extend $absolute-cover
 	z-index 0
+	opacity 0
+	transition 0.35s ease-in-out
+	&.is-active
+		transition 0.25s ease-in-out
+		z-index 1
+		opacity 1
 	
 
 .hide-large
@@ -68,3 +74,7 @@ img
 .hide-small
 	+below(960px)
 		display:none !important
+
+.header-main
+	+below(1024px)
+		height 100vh !important
