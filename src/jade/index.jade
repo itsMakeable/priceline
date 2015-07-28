@@ -25,7 +25,8 @@ block content
 							strong View
 					p Enjoy the views on Instagram and live vicariously through our 15 intrepid travelers as they each post the killer view from their hotel rooms across the country. Guess their location and you could win your own #roomwithaview.
 			.number-block__img
-				.hide-large(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;height: 620px;position:relative')
+				.hide-large(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 100%;height: 650px;position:relative')
+					.overlay(style='opacity:1;')
 					.swiper-container
 						.insta-slider.swiper-wrapper
 							each val, index in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
@@ -41,7 +42,7 @@ block content
 											| Follow @normancook
 									img.insta-gram(src='http://lorempixel.com/290/290/' style='width:290px;height:290px;')
 						.swiper-pagination
-					.overlay
+					
 
 
 

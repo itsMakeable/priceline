@@ -32,5 +32,7 @@ $ ->
 		initialSlide: 1
 		spaceBetween: 50
 		centeredSlides: true
+		longSwipes: false
 		slidesPerView: 'auto'
+		pagination: '.swiper-pagination'
 	)

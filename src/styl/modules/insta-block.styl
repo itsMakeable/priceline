@@ -118,20 +118,6 @@
 	
 .has-happened .insta-overlay__name
 	padding-bottom 5px
-	
-.insta-slider
-	// align()
-	// width 100%
-	cf()
-	// overflow hidden
-	// position absolute
-	// width 100%
-	// margin: 0
-	// padding: 0
-	// list-style-type: none
-	// -webkit-transform-style: preserve-3d
-	// -ms-transform-style: preserve-3d
-	// transform-style: preserve-3d
 
 .insta-user
 	fs(16px)
@@ -171,10 +157,13 @@
 	z-index 10
 	border-radius 50%
 	border 8px solid white
+	
 .swiper-container
 	width 100%
 	height 560px
 	align()
+	top 48%
+	overflow visible
 
 .insta-info
 	padding 25px 20px 40px 20px
@@ -182,7 +171,6 @@
 .insta-slide
 	width 290px
 	height 560px
-	
 	position relative
 	background-color white
 	margin auto
@@ -209,3 +197,13 @@
 	left 0
 	right 0
 	margin auto
+
+.swiper-pagination-bullet
+	size 10px
+	background #becec0
+	opacity 1
+	&.swiper-pagination-bullet-active
+		background blue
+
+.swiper-container-horizontal > .swiper-pagination
+	bottom -30px
