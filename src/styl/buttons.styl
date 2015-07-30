@@ -3,29 +3,30 @@ a
 	cursor pointer
 	text-decoration none
 	transition all 0.2s ease
+	border-bottom 1px solid currentColor
 	&:focus
 		outline: 0
 	&:link
-		color blue
+		color white
 	&:hover
-		color darkblue
+		color white
+		opacity 0.9
 	&:active
-		color darkblue
+		color white
 		transform scale(0.99)
 		transform-origin 50% 50%
 	&[disabled]
 		color gray !important
 		transform scale(1) !important
 	&:visited
-		color blue
+		color white
 
 .button,
 a.button
-	background-color white
-	border 1px solid black
-	color black
-	padding 16px
-	border-radius 25px
+	background-color blue
+	color white
+	padding 21px 24px
+	border-radius 10px
 	fs(18px)
 	margin-top 6px
 	upcase()
