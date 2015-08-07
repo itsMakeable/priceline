@@ -7,11 +7,17 @@ html.no-js(lang='')
 		title Priceline - Room with a View
 		meta(name='description', content='')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
-		link(rel='apple-touch-icon', href='apple-touch-icon.png')
+		//- link(rel='apple-touch-icon', href='apple-touch-icon.png')
+		link(rel="shortcut icon" type="image/x-icon" href="/favicon.ico")
 		//- Place favicon.ico in the root directory
+		
 		link(rel='stylesheet', href='css/font.css')
 		link(rel='stylesheet', href='css/vendor.css')
 		link(rel='stylesheet', href='css/main.css')
+		style
+			include ../includes/css-starter-min.css
+			include ../includes/header.css
+			include ../includes/footer.css
 		script(src='http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js')
 		script.
 			// Async Image Loading
@@ -20,7 +26,7 @@ html.no-js(lang='')
 			//- If extra head content is necessary per page, it can be added in index.jade
 
 	body(style='opacity:0')
-
+		include ../includes/header.html
 		div.hidden
 			include ./includes/symbols.svg
 		
@@ -29,9 +35,18 @@ html.no-js(lang='')
 		
 		block footer
 			//- If extra footer content is necessary per page, it can be added in index.jade
-
+		include ../includes/footer.html
 		block scripts
 		browsersync
+		script.
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-66096214-1', 'auto');
+			  ga('send', 'pageview');
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src="//x.instagramfollowbutton.com/follow.js";s.parentNode.insertBefore(g,s);}(document,"script"));
 		script.
 			head.load(
 				{ vendor: './js/vendor.js' }, 

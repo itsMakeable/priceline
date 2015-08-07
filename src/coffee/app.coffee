@@ -59,11 +59,18 @@ $(window).on 'scroll', ->
 	MKBL.smoothShow()
 $(window).on 'load', ->
 	MKBL.toggleActivation('body')
-	if $(window).width() < 1600
-		$('.parallax-window').parallax({imageSrc: 'img/header_image.png'});
+	if $(window).width() < 1330
+		$('.parallax-window').parallax({
+			imageSrc: 'img/header_image.png'
+			naturalWidth: 960
+			naturalHeight: 584
+			bleed: 10
+			positionX: '50%'
+			positionY: '0'
+		});
 	else
 		$('.parallax-window').css({
 			'background': 'url("img/header_image.png") no-repeat'
 			'background-size': 'cover'
-			'background-position': '50% 50%'
+			'background-position': '50% 10%'
 		})

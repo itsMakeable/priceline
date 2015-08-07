@@ -87,8 +87,10 @@
             transform translate(0, -50%)
     +below(440px)
         .center
-            right 10%
+            right 5%
             width 45%
+            &.special
+                width: 60%
     
 .number-block.is-right
     .number-block__text
@@ -105,7 +107,7 @@
         +below(640px)
             .center
                 right auto
-                left 30px
+                left 16px
                 width 50%
                 transform translate(0, -50%)
         +below(440px)
@@ -123,9 +125,9 @@
     z-index 100
     pointer-events: none
     &.is-1
-        fs(640px)
-        top 180px
-        left px(-140)
+        fs(1000px)
+        top 294px
+        left px(-148)
         +below(1150px)
             left px(-75)
     
@@ -135,9 +137,6 @@
         color white
         fs(550px)
         top 170px
-        &.is-4
-            top 172px
-            fs(600px)
         &.is-2
             fs(550px)
         &.is-1
@@ -155,3 +154,6 @@
             right px(-120)
             +below(1150px)
                 right px(-53)
+            +below(960px)
+                top 172px
+                fs(550px)

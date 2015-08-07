@@ -109,7 +109,12 @@ img
 .header-main
 	+below(1024px)
 		height 90vh !important
-
+		
+.header-overlay
+	background-color: rgba(#000,0.3)
+	@extend $absolute-cover
+	+below(1330px)
+		display: none
 .logo
 	width 170px
 	position absolute
@@ -159,3 +164,19 @@ img
 	100%
 		transform none
 		opacity 1
+
+.global-header
+	.dropdown
+		li
+			background-color #f2f2f2 !important
+		a
+			color #0a84c1
+			background-color #f2f2f2 !important
+			border none
+		
+.global-footer
+	position: relative
+	z-index: 999
+	a
+		border none
+		

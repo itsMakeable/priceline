@@ -2,15 +2,16 @@ extends layouts/layout-primary
 
 block content
 	.container
-	header.header-main.parallax-window(data-parallax="scroll" style='background:transparent; height:540px;position: relative; z-index:9;background-size: cover; background-position:50% 50%;')
+	header.header-main.parallax-window(style='background:transparent; height:540px;position: relative; z-index:9;background-size: cover; background-position:50% 50%;')
 		//- url("img/header_image.png")
+		.header-overlay
 		.container(style='height:inherit; position:relative')
 			.header-main__content(style='position:absolute; bottom:7%;width: 100%;')
 				img.logo(src="img/pricelinelogo.png", alt="")
 				h1(style='font-size: 148px; color: white;  text-align:center;'): strong #roomwithaview
 				h2(style='font-size: 21px; color: white; text-align:center;')
 					strong 
-						| 15 INSTAGRAMERS, 
+						| 15 INSTAGRAMMERS, 
 						br.hide-large
 						| 15 GREAT PRICELINE VIEWS, 
 						br.hide-large
@@ -18,10 +19,10 @@ block content
 						
 				img.icon-arrow(src="img/arrow-06.png", alt="" width='38' height='auto' style='display:block;margin:20px auto 0;width:36px; height: auto;')
 	.container
-		section.number-block(style='height:384px;')
+		section.number-block(style='height:620px;')
 			.number-block__col.number-block__text.is-right
 				.big-number.has-animation.is-1 1
-				.center(style='z-index:600')
+				.center.special(style='z-index:600')
 					span.underline
 						h5.h5
 							strong View
@@ -39,68 +40,95 @@ block content
 										.insta-name Kaley Cuoco
 										
 										p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
-										a.button.instabutton(href='') 
+										.button.instabutton(class="ig-follow" class="ig-follow" data-id="5479dee" data-handle="kylamedina" data-count="false" data-size="small" data-username="true") 
 											img(src="img/instagram-black.png", alt="" style='height:20px;width:20px;display:inline-block;vertical-align:middle;margin-right:10px;position:relative;top:-2px;')
 											| Follow @normancook
 									img.insta-gram(src='http://lorempixel.com/290/290/' style='width:290px;height:290px;')
 						.swiper-pagination
 					
 
+				.hide-small(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 100%;height: 620px;position:relative;overflow:hidden;')
+					.overlay(style='opacity:1;')
+					.swiper-container
+						.insta-slider.swiper-wrapper
+							each val, index in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+								.insta-slide.swiper-slide
+									//- .insta-overlay.will-happen
+									//- 	.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
+									//- 	.insta-overlay__col.insta-overlay__col--left(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
 
+									//- 	.insta-overlay__col.insta-overlay__col--right
+									//- 		.center
 
-				.number-block__col.number-block__instas.hide-small
-					.overlay
-						.insta-overlay.has-happened
-							.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
-							img.close-button(src="img/x-03.png", alt="")
-							.insta-overlay__col.insta-overlay__col--left(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
+									//- 			.insta-overlay__user normancook
+									//- 			.insta-overlay__name Kaley Cuoco
+									//- 			p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
+									//- 			a.button.instabutton(href='') Follow @normancook
+									.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
+									.insta-info
+										.insta-user normancook
+										.insta-name Kaley Cuoco
+										
+										p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
+										.button.instabutton(class="ig-follow" data-id="5479dee" data-handle="kylamedina" data-count="false" data-size="small" data-username="true") 
+											img(src="img/instagram-black.png", alt="" style='height:20px;width:20px;display:inline-block;vertical-align:middle;margin-right:10px;position:relative;top:-2px;')
+											| Follow @normancook
+									img(src='http://lorempixel.com/290/290/' style='width:270px;height:270px;')
+						.swiper-pagination
 
-							.insta-overlay__col.insta-overlay__col--right
-								.center
+				//- .number-block__col.number-block__instas.hide-small
+				//- 	.overlay
+				//- 		.insta-overlay.has-happened
+				//- 			.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
+				//- 			img.close-button(src="img/x-03.png", alt="")
+				//- 			.insta-overlay__col.insta-overlay__col--left(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
 
-									.insta-overlay__user normancook
-									.insta-overlay__name Kaley Cuoco
-									.insta-overlay__small-text posted a view from 
-									.insta-overlay__large-text HOTEL FELIX
-									.insta-overlay__location CHICAGO, IL
-									p 
-										| congrats to 
-										em @jayms 
-										br
-										| for guessing correctly!
-									a.button.instabutton(href='') Follow @normancook
-						.insta-overlay.will-happen
-							.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
-							img.close-button(src="img/x-03.png", alt="")
-							.insta-overlay__col.insta-overlay__col--left(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
+				//- 			.insta-overlay__col.insta-overlay__col--right
+				//- 				.center
 
-							.insta-overlay__col.insta-overlay__col--right
-								.center
+				//- 					.insta-overlay__user normancook
+				//- 					.insta-overlay__name Kaley Cuoco
+				//- 					.insta-overlay__small-text posted a view from 
+				//- 					.insta-overlay__large-text HOTEL FELIX
+				//- 					.insta-overlay__location CHICAGO, IL
+				//- 					p 
+				//- 						| congrats to 
+				//- 						em @jayms 
+				//- 						br
+				//- 						| for guessing correctly!
+				//- 					a.button.instabutton(href='') Follow @normancook
+				//- 		.insta-overlay.will-happen
+				//- 			.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
+				//- 			img.close-button(src="img/x-03.png", alt="")
+				//- 			.insta-overlay__col.insta-overlay__col--left(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
 
-									.insta-overlay__user normancook
-									.insta-overlay__name Kaley Cuoco
-									p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
-									a.button.instabutton(href='') Follow @normancook
+				//- 			.insta-overlay__col.insta-overlay__col--right
+				//- 				.center
 
-					.number-block__instas-container
-						each val, index in [1,2,3,4,5,6,7,8]
-							.insta-block.has-happened(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%')
-								.bottom
-									.insta-block__img.is-small(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
-									.insta-block__info-bg
-										.insta-block__info 
-											span
-											| @NormanCook
-										.insta-block__name Kaley Cuoco
-										.insta-block__info Chicago, IL
-							.insta-block.will-happen
-								.center
-									.insta-block__img-border
-										.insta-block__img(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
-									.insta-block__name Kaley Cuoco
-									.insta-block__info 
-										span
-										| @NormanCook
+				//- 					.insta-overlay__user normancook
+				//- 					.insta-overlay__name Kaley Cuoco
+				//- 					p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
+				//- 					a.button.instabutton(href='') Follow @normancook
+
+				//- 	.number-block__instas-container
+				//- 		each val, index in [1,2,3,4,5,6,7,8]
+				//- 			.insta-block.has-happened(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%')
+				//- 				.bottom
+				//- 					.insta-block__img.is-small(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
+				//- 					.insta-block__info-bg
+				//- 						.insta-block__info 
+				//- 							span
+				//- 							| @NormanCook
+				//- 						.insta-block__name Kaley Cuoco
+				//- 						.insta-block__info Chicago, IL
+				//- 			.insta-block.will-happen
+				//- 				.center
+				//- 					.insta-block__img-border
+				//- 						.insta-block__img(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
+				//- 					.insta-block__name Kaley Cuoco
+				//- 					.insta-block__info 
+				//- 						span
+				//- 						| @NormanCook
 
 		section.number-block.is-right
 			
@@ -154,34 +182,35 @@ block content
 				| See 
 				a(href='#') Official Rules
 				|  and 
-				a(href='#') Privacy Policy
+				a(href='https://www.priceline.com/static-pages/privacy-policy.html') Privacy Policy
 				| . More about the 
-				a(href='#') Room you could&nbsp;Win
+				a(href='http://www.priceline.com/promo/expressdeals.do') Room you could&nbsp;Win
 				| . 
-	.container
-		section.number-block.has-animation(data-delay='300')
-			.number-block__img.hide-small(style='background:url("img/Express_deals.png") no-repeat; background-size: cover; background-position:50% 50%;width:50%;')
-				img.hide-large(src="img/Express_deals.png", alt="")
+	//-
+		.container
+			section.number-block.has-animation(data-delay='300')
+				.number-block__img.hide-small(style='background:url("img/Express_deals.png") no-repeat; background-size: cover; background-position:50% 50%;width:50%;')
+					img.hide-large(src="img/Express_deals.png", alt="")
 
-			.number-block__col.number-block__text(style='width:50%;background-color: white;color: black;')
-				.hide-large
-					div(style='padding: 30px 0 20px 0;')
+				.number-block__col.number-block__text(style='width:50%;background-color: white;color: black;')
+					.hide-large
+						div(style='padding: 30px 0 20px 0;')
+							span.underline.no-padding
+								h3.h3
+									| Express&nbsp;
+									strong Deals
+						img(src="img/Express_deals.png", alt="" )
+						div(style='padding: 5%;text-align:center')
+							p(style='max-width: 540px; display:block;margin: auto;') Choose from a huge collection of top hotels at incredible prices with no bidding required. See the neighborhood, amenities and price of each hotel before you book. You’ll find out the exact name of the hotel immediately after&nbsp;purchase.
+							a.button(href='http://www.priceline.com/promo/expressdeals.do') Search Express Deals
+					.center.hide-small
 						span.underline.no-padding
-							h3.h3
-								| Express&nbsp;
-								strong Deals
-					img(src="img/Express_deals.png", alt="" )
-					div(style='padding: 5%;text-align:center')
-						p(style='max-width: 540px; display:block;margin: auto;') Choose from a huge collection of top hotels at incredible prices with no bidding required. See the neighborhood, amenities and price of each hotel before you book. You’ll find out the exact name of the hotel immediately after&nbsp;purchase.
+								h6.h6 Brought to you by
+								h3.h3
+									| Express&nbsp;
+									strong Deals
+						p  All of the hotels featured in #roomwithaview are available through Priceline.com Express Deals. See the neighborhood, amenities and price of each hotel before you book. We reveal the name immediately after purchase so you get some of the best deals we can&nbsp;offer.
 						a.button(href='') Search Express Deals
-				.center.hide-small
-					span.underline.no-padding
-							h6.h6 Brought to you by
-							h3.h3
-								| Express&nbsp;
-								strong Deals
-					p  All of the hotels featured in #roomwithaview are available through Priceline.com Express Deals. See the neighborhood, amenities and price of each hotel before you book. We reveal the name immediately after purchase so you get some of the best deals we can&nbsp;offer.
-					a.button(href='') Search Express Deals
 
 			
 	block footer

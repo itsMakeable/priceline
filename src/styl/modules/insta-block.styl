@@ -116,7 +116,7 @@
 .insta-overlay__name
 	fs(44px)
 	font-family boldcond
-	padding 5px 0 10px 0
+	padding 5px 0 0px 0
 	
 .has-happened .insta-overlay__name
 	padding-bottom 5px
@@ -168,7 +168,8 @@
 	overflow visible
 
 .insta-info
-	padding 25px 20px 40px 20px
+	padding 20px 16px 40px 16px
+	display inline-block
 	
 .insta-slide
 	width 290px
@@ -178,12 +179,15 @@
 	margin auto
 	cursor pointer
 	cursor hand
+	.button.instabutton, a.button.instabutton
+		border 1px solid black
+			
 	.insta-user-pic
 		top 270px
 		size 70px
 	p
-		fs(17px)
-		padding-top 8px
+		fs(13px)
+		// padding-top 8px
 		padding-bottom 2px
 	a.button.instabutton
 		border 1px solid black
@@ -201,7 +205,8 @@
 	left 0
 	right 0
 	margin auto
-
+	display inline-block
+	
 .swiper-pagination-bullet
 	size 10px
 	background #becec0
@@ -211,3 +216,44 @@
 
 .swiper-container-horizontal > .swiper-pagination
 	bottom -30px
+
+.insta-slide.swiper-slide
+	.insta-overlay
+		opacity 1
+// 		height 310px
+// 		width 580px
+// .hide-small
+// 	.insta-slide.swiper-slide
+// 		background-color transparent
+// 		width 590px
+// 		height 326px
+// 		p
+// 			padding-top 0
+// 	.insta-user-pic
+// 		top 146px
+// 	.swiper-container
+// 		height 324px
+.hide-small
+	.insta-slide.swiper-slide
+		width 270px
+		height 546px
+		.insta-user-pic
+			top 274px
+	.swiper-container-horizontal > .swiper-pagination
+		bottom -29px
+
+// .IGF.small
+// 	display none
+.insta-info
+	.ig-background
+		background none !important
+		box-shadow none !important
+		border none !important
+		padding 0 !important
+	.ig-camera
+		display none !important
+	.IGF.small .ig-text
+		padding 0 !important
+		font-family boldcond
+		color black !important
+		fs(18px)
