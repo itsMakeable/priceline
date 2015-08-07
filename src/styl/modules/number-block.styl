@@ -26,6 +26,7 @@
     height 499px
     text-align center
     position relative
+    // margin 50px 0
     +below(960px)
         height auto !important
         
@@ -37,6 +38,8 @@
     height inherit
     width 640px
     float right
+    position: relative
+    z-index 0
     cf()
     +below(960px)
         width 100%
@@ -63,6 +66,8 @@
     width 319px
     height:inherit
     position relative
+    p
+        text-align justify
     .center
         width 70%
     +below(960px)
@@ -114,15 +119,18 @@
     top 240px
     font-family boldcond
     line-height 0
-    left px(-55)
-    z-index 1
+    left px(-155)
+    z-index 100
     pointer-events: none
     &.is-1
-        fs(630px)
-        top 190px
-    &.is-4
-        fs(800px)
-        top 230px
+        fs(640px)
+        top 180px
+        left px(-140)
+        +below(1150px)
+            left px(-75)
+    
+    +below(1150px)
+        left px(-55)
     +below(960px)
         color white
         fs(550px)
@@ -137,5 +145,13 @@
             top 166px
 .number-block.is-right
     .big-number
-        right px(-55)
+        right px(-155)
         left auto
+        +below(1150px)
+            right px(-55)
+        &.is-4
+            fs(800px)
+            top 230px
+            right px(-120)
+            +below(1150px)
+                right px(-53)

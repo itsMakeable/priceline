@@ -33,15 +33,21 @@ a.button
 	display inline-block
 	font-family regular
 	white-space nowrap
+	transition 0.3s ease
+	&:hover
+		background-color darken(blue,20%)
 	&.instabutton
 		background-color white
 		border 1px solid black
 		padding 16px 16px 16px 20px
+		opacity 1
 		fs(18px)
 		upcase()
 		color black
 		border-radius 25px
 		font-family boldcond
+		&:hover
+			background-color #f0f0f0
 		+below(960px)
 			color blue
 			border none

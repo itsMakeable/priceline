@@ -12,6 +12,22 @@ MKBL.toggleActivation = (el, elClass) ->
 	elClass = elClass || 'is-active'
 	$(el).toggleClass(elClass)
 
+MKBL.smoothShow = ->
+	jQuery('.has-animation').each ->
+	  thisItem = jQuery(this)
+	  if jQuery(window).width() > 700
+	    visible = thisItem.visible(true)
+	    delay = thisItem.attr('data-delay')
+	    if !delay
+	      delay = 0
+	    if thisItem.hasClass('animated')
+	    else if visible
+	      thisItem.delay(delay).queue ->
+	        thisItem.addClass 'animated'
+	        return
+	  else
+	    thisItem.addClass 'animated'
+
 $('.close-button, .overlay').on 'click',  ->
 	MKBL.deactivate('.number-block__instas .overlay')
 	MKBL.deactivate('.number-block__instas .insta-overlay')
@@ -25,7 +41,10 @@ $('.insta-block.will-happen').on 'click',  ->
 	MKBL.toggleActivation('.number-block__instas .insta-overlay.will-happen')
 
 $ ->
-	MKBL.toggleActivation('body')
+	$('.has-animation').each ->
+		if $(this).visible(true)
+			$(this).addClass('no-animation')
+	MKBL.smoothShow()
 	MKBL.swiper = new Swiper('.swiper-container',
 		direction: 'horizontal'
 		loop: false
@@ -36,3 +55,15 @@ $ ->
 		slidesPerView: 'auto'
 		pagination: '.swiper-pagination'
 	)
+$(window).on 'scroll', ->
+	MKBL.smoothShow()
+$(window).on 'load', ->
+	MKBL.toggleActivation('body')
+	if $(window).width() < 1600
+		$('.parallax-window').parallax({imageSrc: 'img/header_image.png'});
+	else
+		$('.parallax-window').css({
+			'background': 'url("img/header_image.png") no-repeat'
+			'background-size': 'cover'
+			'background-position': '50% 50%'
+		})

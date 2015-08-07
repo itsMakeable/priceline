@@ -54,6 +54,7 @@ gulp.task 'browser-sync', ->
 		open: false
 		tunnel: false
 		online: true
+		ghostMode: false
 		logConnections: true
 		snippetOptions:
 			rule:

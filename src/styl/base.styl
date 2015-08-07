@@ -20,7 +20,31 @@ html
 	min-height 100%
 	overflow-x hidden
 	
-	
+h1,
+h2 strong,
+.logo,
+.icon-arrow
+	opacity 0
+	transform translateY(100px)
+
+.csstransforms.csstransitions
+	body.is-active
+		h1,
+		h2 strong,
+		.logo,
+		.icon-arrow
+			opacity 0
+			transform translateY(100px)
+			animation fadein 0.6s ease-out forwards
+		.logo
+			animation-delay 0s
+		h1
+			animation-delay 0.05s
+		h2 strong
+			animation-delay 0.1s
+		.icon-arrow
+			animation-delay 0.15s
+				
 body
 	-webkit-touch-callout none
 	-webkit-text-size-adjust none
@@ -28,9 +52,16 @@ body
 	color black
 	height 100%
 	transition opacity 0.1s ease
-	background-color #f0f0f0
+	// background-color #f0f0f0
 	&.is-active
 		opacity: 1 !important
+		h1,
+		h2 strong,
+		.logo,
+		.icon-arrow
+			opacity 1
+			transform translateY(0px)
+		
 i
 	display inline-block
 	vertical-align middle
@@ -67,7 +98,6 @@ img
 		transition 0.25s ease-in-out
 		z-index 1
 		opacity 1
-	
 
 .hide-large
 	+above(960px)
@@ -94,3 +124,38 @@ img
 		width 120px
 		left 0
 		margin -25px auto 0 auto
+
+.parallax-mirror
+	z-index -1 !important
+	visibility visible !important
+	height 584px !important
+	.parallax-slider
+		height (584px *1.4) !important
+		width auto !important
+
+.has-animation
+	transform translateY(100px)
+	opacity 0
+	transition 0.6s ease-out
+	&.big-number
+		transform translateX(100px)
+	&.is-1,
+	&.is-3
+		transform translateX(-100px)
+	&.no-animation
+		transition 0s linear
+		transform none
+		opacity 1
+	&.animated
+		transform none
+		opacity 1
+		
+@keyframes fadein
+	0%
+		opacity 0
+		transform translateY(100px)
+	10%
+		opacity 0
+	100%
+		transform none
+		opacity 1
