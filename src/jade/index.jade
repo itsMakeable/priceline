@@ -30,51 +30,53 @@ block content
 			.number-block__img(style='z-index:1;')
 				.hide-large(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 100%;height: 650px;position:relative')
 					.overlay(style='opacity:1;')
-					.swiper-container
-						.insta-slider.swiper-wrapper
-							each val, index in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-								.insta-slide.swiper-slide
-									.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
-									.insta-info
-										.insta-user normancook
-										.insta-name Kaley Cuoco
+					include includes/slider.jade
+					//- .swiper-container
+					//- 	.insta-slider.swiper-wrapper
+					//- 		each val, index in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+					//- 			.insta-slide.swiper-slide
+					//- 				.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
+					//- 				.insta-info
+					//- 					.insta-user normancook
+					//- 					.insta-name Kaley Cuoco
 										
-										p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
-										.button.instabutton(class="ig-follow" class="ig-follow" data-id="5479dee" data-handle="kylamedina" data-count="false" data-size="small" data-username="true") 
-											img(src="img/instagram-black.png", alt="" style='height:20px;width:20px;display:inline-block;vertical-align:middle;margin-right:10px;position:relative;top:-2px;')
-											| Follow @normancook
-									img.insta-gram(src='http://lorempixel.com/290/290/' style='width:290px;height:290px;')
-						.swiper-pagination
+					//- 					p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
+					//- 					.button.instabutton(class="ig-follow" class="ig-follow" data-id="5479dee" data-handle="kylamedina" data-count="false" data-size="small" data-username="true") 
+					//- 						img(src="img/instagram-black.png", alt="" style='height:20px;width:20px;display:inline-block;vertical-align:middle;margin-right:10px;position:relative;top:-2px;')
+					//- 						| Follow @normancook
+					//- 				img.insta-gram(src='http://lorempixel.com/290/290/' style='width:290px;height:290px;')
+					//- 	.swiper-pagination
 					
 
 				.hide-small(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 100%;height: 620px;position:relative;overflow:hidden;')
 					.overlay(style='opacity:1;')
-					.swiper-container
-						.insta-slider.swiper-wrapper
-							each val, index in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-								.insta-slide.swiper-slide
-									//- .insta-overlay.will-happen
-									//- 	.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
-									//- 	.insta-overlay__col.insta-overlay__col--left(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
+						include includes/slider.jade
+					//- .swiper-container
+					//- 	.insta-slider.swiper-wrapper
+					//- 		each val, index in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+					//- 			.insta-slide.swiper-slide
+					//- 				//- .insta-overlay.will-happen
+					//- 				//- 	.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
+					//- 				//- 	.insta-overlay__col.insta-overlay__col--left(style='background:url("http://lorempixel.com/400/200/") no-repeat; background-size:cover;background-position:50% 50%')
 
-									//- 	.insta-overlay__col.insta-overlay__col--right
-									//- 		.center
+					//- 				//- 	.insta-overlay__col.insta-overlay__col--right
+					//- 				//- 		.center
 
-									//- 			.insta-overlay__user normancook
-									//- 			.insta-overlay__name Kaley Cuoco
-									//- 			p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
-									//- 			a.button.instabutton(href='') Follow @normancook
-									.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
-									.insta-info
-										.insta-user normancook
-										.insta-name Kaley Cuoco
+					//- 				//- 			.insta-overlay__user normancook
+					//- 				//- 			.insta-overlay__name Kaley Cuoco
+					//- 				//- 			p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
+					//- 				//- 			a.button.instabutton(href='') Follow @normancook
+					//- 				.insta-user-pic(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 50%;')
+					//- 				.insta-info
+					//- 					.insta-user normancook
+					//- 					.insta-name Kaley Cuoco
 										
-										p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
-										.button.instabutton(class="ig-follow" data-id="5479dee" data-handle="kylamedina" data-count="false" data-size="small" data-username="true") 
-											img(src="img/instagram-black.png", alt="" style='height:20px;width:20px;display:inline-block;vertical-align:middle;margin-right:10px;position:relative;top:-2px;')
-											| Follow @normancook
-									img(src='http://lorempixel.com/290/290/' style='width:270px;height:270px;')
-						.swiper-pagination
+					//- 					p Norman is the OTHER love of my life. My husband knew this going in. He's ok with it. www.facebook.com/pages/Burning-Bodhi/788075557950605
+					//- 					.button.instabutton(class="ig-follow" data-id="5479dee" data-handle="kylamedina" data-count="false" data-size="small" data-username="true") 
+					//- 						img(src="img/instagram-black.png", alt="" style='height:20px;width:20px;display:inline-block;vertical-align:middle;margin-right:10px;position:relative;top:-2px;')
+					//- 						| Follow @normancook
+					//- 				img(src='http://lorempixel.com/290/290/' style='width:270px;height:270px;')
+					//- 	.swiper-pagination
 
 				//- .number-block__col.number-block__instas.hide-small
 				//- 	.overlay
