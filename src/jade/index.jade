@@ -48,9 +48,10 @@ block content
 					//- 	.swiper-pagination
 					
 
-				.hide-small(style='background:url("img/header_image.png") no-repeat; background-size:cover;background-position:50% 100%;height: 620px;position:relative;overflow:hidden;')
-					.overlay(style='opacity:1;')
-						include includes/slider.jade
+				.hide-small(style='background-size:cover;background-position:50% 100%;height: 620px;position:relative;overflow:hidden;position:absolute;width: 839px;right:-60px')
+					.overlay(style='opacity:1;left:7%;right:7%;background-color:#EBF5F5')
+					include includes/slider.jade
+						
 					//- .swiper-container
 					//- 	.insta-slider.swiper-wrapper
 					//- 		each val, index in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
@@ -140,7 +141,7 @@ block content
 					span.underline
 						h5.h5
 							strong Clue
-					p Get a clue (or a few) and follow @priceline for hints and tips to open your eyes to the #roomwithaview in the&nbsp;posts.
+					p Get a clue (or a few) and follow @priceline for hints and tips to the #roomwithaview in the&nbsp;posts.
 					a.button.instabutton(href='') 
 						img.hide-small(src="img/instagram-black.png", alt="" style='height:20px;width:20px;display:inline-block;vertical-align:middle;margin-right:10px;position:relative;top:-2px;')
 						img.hide-large(src="img/instagram-blue.png", alt="" style='height:20px;width:20px;display:inline-block;vertical-align:middle;margin-right:10px;position:relative;top:-2px;')
@@ -182,11 +183,11 @@ block content
 				| Valid dates 8/14/15 - 9/27/15. Must be 21 years or older at time of entry to&nbsp;qualify. 
 				br
 				| See 
-				a(href='/rules.html') Official Rules
+				a(href='/rules.html' target='_blank') Official Rules
 				|  and 
-				a(href='https://www.priceline.com/static-pages/privacy-policy.html') Privacy Policy
+				a(href='https://www.priceline.com/static-pages/privacy-policy.html' target='_blank') Privacy Policy
 				| . More about the 
-				a(href='http://www.priceline.com/promo/expressdeals.do') room you could&nbsp;win
+				a(href='http://www.priceline.com/promo/expressdeals.do' target='_blank') room you could&nbsp;win
 				| . 
 	//-
 		.container

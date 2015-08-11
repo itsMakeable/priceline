@@ -24,6 +24,12 @@
     "df-visible": "customd/jquery-visible#~1.2.0"
   },
   "overrides": {
+    "swiper": {
+      "main": [
+        "dist/css/swiper.min.css",
+        "dist/js/swiper.jquery.min.js"
+      ]
+    },
     "waypoints": {
       "main": [
         "lib/jquery.waypoints.js"

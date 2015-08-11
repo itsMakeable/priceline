@@ -45,21 +45,41 @@ $ ->
 		if $(this).visible(true)
 			$(this).addClass('no-animation')
 	MKBL.smoothShow()
+	if $(window).width() > 960
+		MKBL.swiperOptions = 
+			direction: 'horizontal'
+			loop: true
+			loopedSlides: $('.insta-slide').length
+			initialSlide: 1
+			spaceBetween: 10
+			centeredSlides: true
+			# longSwipes: false
+			slidesPerView: 'auto'
+			pagination: '.swiper-pagination'
+			nextButton: '.next-button'
+			prevButton: '.prev-button'
+			grabCursor: true
+			paginationClickable: true
+	else
+		MKBL.swiperOptions = 
+			direction: 'horizontal'
+			loop: true
+			loopedSlides: $('.insta-slide').length
+			initialSlide: 1
+			spaceBetween: 50
+			centeredSlides: true
+			# longSwipes: false
+			slidesPerView: 'auto'
+			pagination: '.swiper-pagination'
 	MKBL.swiper = new Swiper('.swiper-container',
-		direction: 'horizontal'
-		loop: false
-		initialSlide: 1
-		spaceBetween: 50
-		centeredSlides: true
-		longSwipes: false
-		slidesPerView: 'auto'
-		pagination: '.swiper-pagination'
+		MKBL.swiperOptions
 	)
+	
 $(window).on 'scroll', ->
 	MKBL.smoothShow()
 $(window).on 'load', ->
 	MKBL.toggleActivation('body')
-	if $(window).width() < 1330
+	if $(window).width() < 1330 && !head.ie
 		$('.parallax-window').parallax({
 			imageSrc: 'img/header_image.png'
 			naturalWidth: 960
@@ -71,6 +91,7 @@ $(window).on 'load', ->
 	else
 		$('.parallax-window').css({
 			'background': 'url("img/header_image.png") no-repeat'
+			'background-size': '100% auto'
 			'background-size': 'cover'
 			'background-position': '50% 10%'
 		})

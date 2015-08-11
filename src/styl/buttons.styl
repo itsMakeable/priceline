@@ -7,20 +7,38 @@ a
 	&:focus
 		outline: 0
 	&:link
-		color white
+		color blue
 	&:hover
-		color white
+		color blue
 		opacity 0.9
 	&:active
-		color white
+		color blue
 		transform scale(0.99)
 		transform-origin 50% 50%
 	&[disabled]
 		color gray !important
 		transform scale(1) !important
 	&:visited
-		color white
-
+		color blue
+.bg--black
+	a
+		&:focus
+			outline: 0
+		&:link
+			color white
+		&:hover
+			color blue
+			opacity 0.9
+		&:active
+			color white
+			transform scale(0.99)
+			transform-origin 50% 50%
+		&[disabled]
+			color gray !important
+			transform scale(1) !important
+		&:visited
+			color white
+		
 .button,
 a.button
 	background-color blue
@@ -39,7 +57,7 @@ a.button
 	&.instabutton
 		background-color white
 		border 1px solid black
-		padding 16px 20px 16px 20px
+		padding 12px 16px 12px 16px
 		opacity 1
 		fs(18px)
 		upcase()

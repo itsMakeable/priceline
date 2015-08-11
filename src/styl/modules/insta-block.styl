@@ -175,9 +175,9 @@
 	position: relative
 	.button
 		position absolute
-		bottom 0
-		left 26px
-		right 26px
+		bottom 5px
+		left 30px
+		right 30px
 		margin auto
 	a
 		color blue
@@ -252,6 +252,7 @@
 	.insta-slide.swiper-slide
 		width 270px
 		height 546px
+		border 1px solid #f0f0f0
 		.insta-user-pic
 			top 275px
 	.swiper-container-horizontal > .swiper-pagination
@@ -272,3 +273,36 @@
 		font-family boldcond
 		color black !important
 		fs(18px)
+		
+
+.slider-button
+	size 30px 60px
+	background-color blue
+	position absolute
+	top -10px
+	bottom 0
+	margin auto
+	z-index 200
+	transition 0.2s ease 
+	+below(1080px)
+		display none
+	&.next-button
+		background blue url(../img/arrow-right.png) no-repeat
+		background-size 10px auto
+		background-position 50% 50%
+		right 5px
+		left auto
+		&:hover
+			background black url(../img/arrow-right.png) no-repeat
+			background-size 10px auto
+			background-position 50% 50%
+	&.prev-button
+		background blue url(../img/arrow-left.png) no-repeat
+		background-size 10px auto
+		background-position 50% 50%
+		left 6px
+		right auto
+		&:hover
+			background black url(../img/arrow-left.png) no-repeat
+			background-size 10px auto
+			background-position 50% 50%

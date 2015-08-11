@@ -15,6 +15,7 @@ html
 	font-smooth always
 	-webkit-box-sizing border-box
 	-moz-box-sizing border-box
+	box-sizing border-box
 	font-family sans-serif
 	position relative
 	min-height 100%
@@ -52,7 +53,6 @@ body
 	color black
 	height 100%
 	transition opacity 0.1s ease
-	// background-color #f0f0f0
 	&.is-active
 		opacity: 1 !important
 		h1,
@@ -61,7 +61,8 @@ body
 		.icon-arrow
 			opacity 1
 			transform translateY(0px)
-		
+html.ie body
+	opacity: 1 !important
 i
 	display inline-block
 	vertical-align middle
@@ -138,22 +139,23 @@ img
 		height (584px *1.4) !important
 		width auto !important
 
-.has-animation
-	transform translateY(100px)
-	opacity 0
-	transition 0.6s ease-out
-	&.big-number
-		transform translateX(100px)
-	&.is-1,
-	&.is-3
-		transform translateX(-100px)
-	&.no-animation
-		transition 0s linear
-		transform none
-		opacity 1
-	&.animated
-		transform none
-		opacity 1
+.no-ie
+	.has-animation
+		transform translateY(100px)
+		opacity 0
+		transition 0.6s ease-out
+		&.big-number
+			transform translateX(100px)
+		&.is-1,
+		&.is-3
+			transform translateX(-100px)
+		&.no-animation
+			transition 0s linear
+			transform none
+			opacity 1
+		&.animated
+			transform none
+			opacity 1
 		
 @keyframes fadein
 	0%
@@ -165,6 +167,7 @@ img
 		transform none
 		opacity 1
 
+
 .global-header
 	.dropdown
 		li
@@ -172,8 +175,14 @@ img
 		a
 			color #0a84c1
 			background-color #f2f2f2 !important
-			border none
-		
+	a
+		border 0px solid transparent !important
+
+body
+	.global-header__top-level-link, 
+	.global-header__nav-collapsed__icon-container
+		color #9fddff !important
+					
 .global-footer
 	position: relative
 	z-index: 999
@@ -185,3 +194,6 @@ table
 	margin-bottom 10px
 ol
 	ol()
+
+.icon-logo-priceline.global-header__logo
+	width 160px

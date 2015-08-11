@@ -30,13 +30,12 @@
     +below(960px)
         height auto !important
         
-        
 .lt-ie11 .number-block
     overflow hidden
     
 .number-block__img
     height inherit
-    width 640px
+    width 760px
     float right
     position: relative
     z-index 0
@@ -50,7 +49,7 @@
     
 .number-block.is-right
     .number-block__img
-        width (960px - 432px)
+        width (1080px - 432px)
         float left
         +below(960px)
             width 100%
@@ -98,7 +97,6 @@
         width 432px
         .center
             width 60%
-            
         +below(960px)
             width 100%
             float none
@@ -118,7 +116,7 @@
     color blue
     position absolute
     fs(770px)
-    top 240px
+    top px(240)
     font-family boldcond
     line-height 0
     left px(-155)
@@ -157,3 +155,14 @@
             +below(960px)
                 top 172px
                 fs(550px)
+.lt-ie10 .number-block
+    .big-number
+        left 0 !important
+        right 0 !important
+        margin auto
+    &.is-right
+        .big-number
+            margin auto
+            left 0 !important
+            right 0 !important
+        
