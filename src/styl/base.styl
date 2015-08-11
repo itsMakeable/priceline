@@ -101,10 +101,10 @@ img
 		opacity 1
 
 .hide-large
-	+above(960px)
+	+above(1080px)
 		display:none !important
 .hide-small
-	+below(960px)
+	+below(1080px)
 		display:none !important
 
 .header-main
@@ -114,15 +114,15 @@ img
 .header-overlay
 	background-color: rgba(#000,0.3)
 	@extend $absolute-cover
-	+below(1330px)
-		display: none
+	// +below(1330px)
+	// 	display: none
 .logo
 	width 170px
 	position absolute
 	right 0
 	left -300px
 	margin -5px auto 0 auto
-	+below(960px)
+	+below(1080px)
 		width 150px
 		left -170px
 		margin -15px auto 0 auto

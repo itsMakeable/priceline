@@ -4,7 +4,7 @@
 	overflow hidden
 	height inherit
 	position relative
-	+below(960px)
+	+below(1080px)
 		max-width 100%
 	// .number-block__instas-container
 	// 	width 130%
@@ -300,9 +300,14 @@
 		background blue url(../img/arrow-left.png) no-repeat
 		background-size 10px auto
 		background-position 50% 50%
-		left 6px
+		left 5px
 		right auto
 		&:hover
 			background black url(../img/arrow-left.png) no-repeat
 			background-size 10px auto
 			background-position 50% 50%
+
+.index-slide .insta-name
+	&:hover
+		color blue
+		transition 0.2s ease

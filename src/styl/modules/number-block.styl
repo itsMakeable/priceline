@@ -27,8 +27,9 @@
     text-align center
     position relative
     // margin 50px 0
-    +below(960px)
+    +below(1080px)
         height auto !important
+    
         
 .lt-ie11 .number-block
     overflow hidden
@@ -40,7 +41,39 @@
     position: relative
     z-index 0
     cf()
-    +below(960px)
+    &.is-2
+        background:url("../img/section_2_1x.jpg") no-repeat; 
+        background-size: cover; 
+        background-position:50% 0%
+        @media screen and (max-width: 1080px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1080px) and (min-resolution: 192dpi)
+            background:url("../img/section_2_2x.jpg") no-repeat; 
+            background-size: cover; 
+            background-position:50% 0%
+    &.is-3
+        background:url("../img/section_3_1x.jpg") no-repeat; 
+        background-size: cover; 
+        background-position:50% 0%
+        @media screen and (max-width: 1080px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1080px) and (min-resolution: 192dpi)
+            background:url("../img/section_3_2x.jpg") no-repeat; 
+            background-size: cover; 
+            background-position:50% 0%
+    &.is-4
+        background:url("../img/section_4_1x.jpg") no-repeat; 
+        background-size: cover; 
+        background-position:50% 0%
+        @media screen and (max-width: 1080px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1080px) and (min-resolution: 192dpi)
+            background:url("../img/section_4_2x.jpg") no-repeat; 
+            background-size: cover; 
+            background-position:50% 0%
+    &.is-5
+        background:url("../img/section_5_1x.jpg") no-repeat; 
+        background-size: cover; 
+        background-position:50% 0%
+        @media screen and (max-width: 1080px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1080px) and (min-resolution: 192dpi)
+            background:url("../img/section_5_2x.jpg") no-repeat; 
+            background-size: cover; 
+            background-position:50% 0%
+    +below(1080px)
         width 100%
         float none
         min-height auto
@@ -51,13 +84,13 @@
     .number-block__img
         width (1080px - 432px)
         float left
-        +below(960px)
+        +below(1080px)
             width 100%
             float none
     
 .number-block__col
     float left
-    +below(960px)
+    +below(1080px)
         float none
     
 .number-block__text
@@ -69,14 +102,14 @@
         text-align justify
     .center
         width 70%
-    +below(960px)
+    +below(1080px)
         width 100% !important
         background-color blue
         color white
         min-height 350px
         height auto
         .center
-            width 300px
+            width 50%
             
     +below(640px)
         .center
@@ -97,11 +130,11 @@
         width 432px
         .center
             width 60%
-        +below(960px)
+        +below(1080px)
             width 100%
             float none
             .center
-                width 300px
+                width 50%
         +below(640px)
             .center
                 right auto
@@ -128,10 +161,12 @@
         left px(-148)
         +below(1150px)
             left px(-75)
+        +below(540px)
+            left px(-50)
     
     +below(1150px)
         left px(-55)
-    +below(960px)
+    +below(1080px)
         color white
         fs(550px)
         top 170px
@@ -152,7 +187,7 @@
             right px(-120)
             +below(1150px)
                 right px(-53)
-            +below(960px)
+            +below(1080px)
                 top 172px
                 fs(550px)
 .lt-ie10 .number-block

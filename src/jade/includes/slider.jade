@@ -13,6 +13,10 @@
 						img(src="img/instagram-black.png", alt="" style='height:20px;width:20px;display:inline-block;vertical-align:middle;margin-right:10px;position:relative;top:-2px;')
 						| Follow @#{grammer.username}
 				img(src='img/profile/#{grammer.username}.jpg' style='width:268px;height:268px;')
+		.insta-slide.swiper-slide.index-slide
+			.center
+				each grammer, index in list
+					.insta-name(data-index='#{index}') #{grammer.username}
 
 	.swiper-pagination
 .prev-button.slider-button
