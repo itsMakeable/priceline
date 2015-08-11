@@ -19,12 +19,17 @@ gulp.task 'bower', ->
 	gulp.src(files)
 		.pipe $.plumber(errorHandler: onError)
 		.pipe $.filter(['**/*.js'])
+		.pipe $.order([
+		    "**/jquery.js"
+		    "**/swiper.jquery.js"
+		])
 		.pipe $.concat 'vendor.js'
 		# .pipe($.accord('uglify-js', {
 		# 	beautify: true
 		# 	mangle: false
 		# }))
 		.pipe gulp.dest 'app/js'
+	
 	gulp.src(files)
 		.pipe $.plumber(errorHandler: onError)
 		.pipe $.filter(['**/*.css'])

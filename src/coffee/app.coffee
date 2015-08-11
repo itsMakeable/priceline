@@ -3,7 +3,6 @@
 ###
 
 MKBL = {}
-
 MKBL.deactivate = (el, elClass) ->
 	elClass = elClass || 'is-active'
 	$(el).removeClass(elClass)
@@ -47,7 +46,7 @@ $ ->
 			$(this).addClass('no-animation')
 	MKBL.smoothShow()
 	if $(window).width() > 1080
-		MKBL.swiperOptions = 
+		swiperOptions = 
 			direction: 'horizontal'
 			loop: true
 			loopedSlides: $('.insta-slide').length
@@ -62,7 +61,7 @@ $ ->
 			grabCursor: true
 			paginationClickable: true
 	else
-		MKBL.swiperOptions = 
+		swiperOptions = 
 			direction: 'horizontal'
 			loop: true
 			loopedSlides: $('.insta-slide').length
@@ -72,16 +71,17 @@ $ ->
 			# longSwipes: false
 			slidesPerView: 'auto'
 			pagination: '.swiper-pagination'
-	MKBL.swiper = new Swiper('.swiper-container',
-		MKBL.swiperOptions
+	swiper = new Swiper('.swiper-container',
+		swiperOptions
 	)
+	console.log(swiper.slideTo(4))
 	$('.index-slide .insta-name').on 'click', ->
-		console.log $(this).attr('data-index')
-		MKBL.swiper.slideTo($(this).data('index'))
+		console.log swiper.clickedIndex
+		swiper.slideTo($(this).data('index'))
 	
 $(window).on 'resize', ->
 	if $(window).width() > 1080
-		MKBL.swiperOptions = 
+		swiperOptions = 
 			direction: 'horizontal'
 			loop: true
 			loopedSlides: $('.insta-slide').length
@@ -96,7 +96,7 @@ $(window).on 'resize', ->
 			grabCursor: true
 			paginationClickable: true
 	else
-		MKBL.swiperOptions = 
+		swiperOptions = 
 			direction: 'horizontal'
 			loop: true
 			loopedSlides: $('.insta-slide').length
@@ -106,24 +106,24 @@ $(window).on 'resize', ->
 			# longSwipes: false
 			slidesPerView: 'auto'
 			pagination: '.swiper-pagination'
-	MKBL.swiper = new Swiper('.swiper-container',
-		MKBL.swiperOptions
-	)
-	if $(window).width() < 1330 && !head.ie && $(window).width() > 1080
-		$('.parallax-window').parallax({
-			imageSrc: 'img/header_image.png'
-			naturalWidth: 960
-			naturalHeight: 584
-			bleed: 10
-			positionX: '50%'
-			positionY: '0'
-		});
-	else
-		$('.parallax-window').css({
-			'background': 'url("img/header_image.png") no-repeat'
-			'background-size': 'cover'
-			'background-position': '50% 10%'
-		})
+	# swiper = new Swiper('.swiper-container',
+	# 	swiperOptions
+	# )
+	# if $(window).width() < 1330 && !head.ie && $(window).width() > 1080
+	# 	$('.parallax-window').parallax({
+	# 		imageSrc: 'img/header.jpg'
+	# 		naturalWidth: 960
+	# 		naturalHeight: 584
+	# 		bleed: 10
+	# 		positionX: '50%'
+	# 		positionY: '0'
+	# 	});
+	# else
+	# 	$('.parallax-window').css({
+	# 		'background': 'url("img/header.jpg") no-repeat'
+	# 		'background-size': 'cover'
+	# 		'background-position': '50% 10%'
+	# 	})
 	
 
 $(window).on 'scroll', ->
@@ -132,27 +132,27 @@ $(window).on 'scroll', ->
 
 $(window).on 'load', ->
 	MKBL.toggleActivation('body')
-	if $(window).width() > 1330 && head.retina
-		$('.parallax-window').parallax({
-			imageSrc: 'img/header-large.png'
-			naturalWidth: 960
-			naturalHeight: 584
-			bleed: 10
-			positionX: '50%'
-			positionY: '0'
-		});
-	if $(window).width() < 1330 && !head.ie && $(window).width() > 1080
-		$('.parallax-window').parallax({
-			imageSrc: 'img/header.jpg'
-			naturalWidth: 960
-			naturalHeight: 584
-			bleed: 10
-			positionX: '50%'
-			positionY: '0'
-		});
-	else
-		$('.parallax-window').css({
-			'background': 'url("img/header.jpg") no-repeat'
-			'background-size': 'cover'
-			'background-position': '50% 10%'
-		})
+	# if $(window).width() > 1330 && head.retina
+	# 	$('.parallax-window').parallax({
+	# 		imageSrc: 'img/header.jpg'
+	# 		naturalWidth: 960
+	# 		naturalHeight: 584
+	# 		bleed: 10
+	# 		positionX: '50%'
+	# 		positionY: '0'
+	# 	});
+	# if $(window).width() < 1330 && !head.ie && $(window).width() > 1080
+	# 	$('.parallax-window').parallax({
+	# 		imageSrc: 'img/header.jpg'
+	# 		naturalWidth: 960
+	# 		naturalHeight: 584
+	# 		bleed: 10
+	# 		positionX: '50%'
+	# 		positionY: '0'
+	# 	});
+	# else
+	# $('.parallax-window').css({
+	# 	'background': 'url("img/header.jpg") no-repeat'
+	# 	'background-size': 'cover'
+	# 	'background-position': '50% 10%'
+	# })

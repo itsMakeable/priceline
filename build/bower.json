@@ -27,7 +27,8 @@
     "swiper": {
       "main": [
         "dist/css/swiper.min.css",
-        "dist/js/swiper.jquery.min.js"
+        "dist/js/swiper.jquery.js",
+        "dist/js/swiper.js"
       ]
     },
     "waypoints": {
