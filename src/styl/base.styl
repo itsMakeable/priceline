@@ -111,7 +111,11 @@ img
 .header-main
 	background: url("../img/header.jpg") no-repeat
 	background-size: cover
-	background-position: 10% 10%
+	background-position: 100% 45%
+	+above(1900px)
+		background: url("../img/header-large.jpg") no-repeat
+		background-size: cover
+		background-position: 100% 45%
 	+below(1024px)
 		height 90vh !important
 		
