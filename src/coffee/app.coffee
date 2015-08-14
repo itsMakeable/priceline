@@ -74,10 +74,9 @@ $ ->
 	swiper = new Swiper('.swiper-container',
 		swiperOptions
 	)
-	console.log(swiper.slideTo(4))
-	$('.index-slide .insta-name').on 'click', ->
-		console.log swiper.clickedIndex
-		swiper.slideTo($(this).data('index'))
+	# $('.index-slide .insta-name').on 'click', ->
+	# 	console.log swiper.clickedIndex
+	# 	swiper.slideTo($(this).data('index'))
 	
 $(window).on 'resize', ->
 	if $(window).width() > 1080
