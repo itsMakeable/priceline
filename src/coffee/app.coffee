@@ -71,6 +71,7 @@ $ ->
 			# longSwipes: false
 			slidesPerView: 'auto'
 			pagination: '.swiper-pagination'
+			paginationClickable: true
 	swiper = new Swiper('.swiper-container',
 		swiperOptions
 	)
