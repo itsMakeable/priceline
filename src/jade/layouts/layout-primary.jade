@@ -10,7 +10,7 @@ html.no-js(lang='')
 		//- link(rel='apple-touch-icon', href='apple-touch-icon.png')
 		link(rel="shortcut icon" type="image/x-icon" href="/favicon.ico")
 		//- Place favicon.ico in the root directory
-		
+		script(src='//platform.instagram.com/en_US/embeds.js')
 		link(rel='stylesheet', href='css/font.css')
 		link(rel='stylesheet', href='css/vendor.css')
 		link(rel='stylesheet', href='css/main.css')
@@ -20,14 +20,14 @@ html.no-js(lang='')
 			include ../includes/footer.css
 			[data-aload] { background-image: none !important; }
 		script(src='http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js')
-		script(src='//platform.instagram.com/en_US/embeds.js')
+		
 		script.
 			// Async Image Loading
 			function aload(t){"use strict";t=t||window.document.querySelectorAll("[data-aload]"),void 0===t.length&&(t=[t]);var a,e=0,r=t.length;for(e;r>e;e+=1)a=t[e],a["LINK"!==a.tagName?"src":"href"]=a.getAttribute("data-aload"),a.removeAttribute("data-aload");return t}
 		block head
 			//- If extra head content is necessary per page, it can be added in index.jade
 
-	body(style='opacity:0')
+	body(style='opacity:1')
 		include ../includes/header.html
 		div.hidden
 			include ./includes/symbols.svg
@@ -40,24 +40,24 @@ html.no-js(lang='')
 		include ../includes/footer.html
 		block scripts
 		browsersync
-		script.
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		//- script.
+		//- 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		//- 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		//- 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		//- 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-			  ga('create', 'UA-66096214-1', 'auto');
-			  ga('send', 'pageview');
-			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src="//x.instagramfollowbutton.com/follow.js";s.parentNode.insertBefore(g,s);}(document,"script"));
-			(function(d, s) {
-			   var js = d.createElement(s),
-			       sc = d.getElementsByTagName(s)[0];
-			   js.src='http://www.priceline.com/static-pages/boomerang-pcln_partner.js';
-			   sc.parentNode.insertBefore(js, sc);
-			}(document, 'script'));
-			var Pcln = {
-			pageName : 'roomwithaview-campaign'
-			};
+		//- 	  ga('create', 'UA-66096214-1', 'auto');
+		//- 	  ga('send', 'pageview');
+		//- 	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src="//x.instagramfollowbutton.com/follow.js";s.parentNode.insertBefore(g,s);}(document,"script"));
+		//- 	(function(d, s) {
+		//- 	   var js = d.createElement(s),
+		//- 	       sc = d.getElementsByTagName(s)[0];
+		//- 	   js.src='http://www.priceline.com/static-pages/boomerang-pcln_partner.js';
+		//- 	   sc.parentNode.insertBefore(js, sc);
+		//- 	}(document, 'script'));
+		//- 	var Pcln = {
+		//- 	pageName : 'roomwithaview-campaign'
+		//- 	};
 		script.
 			head.load(
 				{ vendor: './js/vendor.js' }, 
