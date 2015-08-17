@@ -7,6 +7,15 @@
 	position absolute
 	width  839px
 	right -60px
+	+above(1080px)
+		.insta-slide.swiper-slide
+			width 270px
+			height 546px
+			border 1px solid #f0f0f0
+			.insta-user-pic
+				top 255px
+		.swiper-container-horizontal > .swiper-pagination
+			bottom -29px
 	+below(1080px)
 		position: static
 		background: url("../img/header.jpg") no-repeat
@@ -211,7 +220,7 @@
 		bottom 0
 	
 .insta-slide
-	width 290px
+	width 270px
 	height 560px
 	position relative
 	background-color white
@@ -275,15 +284,8 @@
 // 		top 146px
 // 	.swiper-container
 // 		height 324px
-.hide-small
-	.insta-slide.swiper-slide
-		width 270px
-		height 546px
-		border 1px solid #f0f0f0
-		.insta-user-pic
-			top 255px
-	.swiper-container-horizontal > .swiper-pagination
-		bottom -29px
+// .hide-small
+
 
 // .IGF.small
 // 	display none
