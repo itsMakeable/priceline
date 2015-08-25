@@ -30,6 +30,7 @@
     +below(1080px)
         height auto !important
         overflow hidden
+    
         
     
         
@@ -44,13 +45,17 @@
     z-index 0
     cf()
     &.is-2
-        background:url("../img/section_2_1x.jpg") no-repeat; 
+        background:url("../img/instagram_sf.png") no-repeat !important; 
         background-size: cover; 
-        background-position:50% 0%
-        @media screen and (max-width: 1080px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1080px) and (min-resolution: 192dpi)
-            background:url("../img/section_2_2x.jpg") no-repeat; 
-            background-size: cover; 
-            background-position:50% 0%
+        background-position:100% 100%
+        +below(1080px)
+            min-height 545px
+        .instagram-media
+            align()
+        // @media screen and (max-width: 1080px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1080px) and (min-resolution: 192dpi)
+        //     background:url("../img/instagram_sf.png") no-repeat; 
+        //     background-size: cover; 
+        //     background-position:50% 0%
     &.is-3
         background:url("../img/section_3_1x.jpg") no-repeat; 
         background-size: cover; 

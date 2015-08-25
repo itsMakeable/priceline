@@ -161,7 +161,7 @@
 .insta-name
 	font-family boldcond
 	fs(30px)
-	padding-bottom 10px
+	// padding-bottom 10px
 	
 .insta-overlay__user
 	fs(14px)
@@ -229,7 +229,9 @@
 	background-color white
 	margin auto
 	cursor pointer
-	cursor hand
+	cursor grab
+	a
+		cursor pointer
 	.button.instabutton, a.button.instabutton
 		border 1px solid black
 			
@@ -347,3 +349,20 @@
 	&:hover
 		color blue
 		transition 0.2s ease
+
+.number-block__img.open-table-insta
+	width:50%;
+	background:url("../img/instagram_food.png") no-repeat; 
+	background-size:cover;
+	background-position:93% 0%; 
+	
+	.instagram-media
+		align()
+
+	+below(1080px)
+		width:100%;
+		min-height: 545px
+		background:url("../img/instagram_food.png") no-repeat !important; 
+		background-size:cover;
+		background-position:93% 0%; 
+		
